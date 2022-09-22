@@ -1,0 +1,222 @@
+:root {
+  --dark0: #0a101b;
+  --dark1: #020305;
+
+  --accent: #074df0;
+
+  --plainwhite: #ffffffa9;
+
+  --light0: #ffffffa9;
+  --light1: #ffffffa9;
+  --light2: #ffffffa9;
+
+  --pink: #c90561;
+  --orange: #d5642b;
+  --yellow: #cbb720;
+  --green: #67c707;
+  --blue: #04bcd1;
+  --teal: #056975fb;
+  --purple: #6b4dff;
+  --darkpurple: #412ca8a9;
+}
+
+.theme-dark,
+.theme-light {
+  --font-monospace: "Ubunut Mono", monospace;
+  --background-primary: var(--dark0);
+  --background-primary-alt: var(--dark0);
+  --background-secondary: var(--dark1);
+  --background-secondary-alt: var(--dark1);
+  --text-normal: var(--plainwhite);
+  --text-faint: var(--light0);
+  --text-muted: var(--teal);
+  --text-title-h1: var(--pink);
+  --text-title-h2: var(--blue);
+  --text-title-h3: var(--yellow);
+  --text-title-h4: var(--green);
+  --text-title-h5: var(--purple);
+  --text-link: var(--yellow);
+  --text-a: var(--pink);
+  --text-a-hover: var(--plainwhite);
+  --text-mark: var(--yellow);
+  --pre-code: var(--dark1);
+  --interactive-accent: var(--accent);
+  --interactive-before: var(--dark0);
+  --background-modifier-border: var(--darkpurple); 
+  --text-accent: var(--orange);
+  --interactive-accent-rgb: var(--orange);
+  --inline-code: var(--pink);
+  --code-block: var(--pink);
+  --vim-cursor: var(--light0);
+
+  /* --text-highlight-bg:          none; */
+}
+
+.markdown-source-view {
+  font-family: "jetbrains mono ", monospace;
+}
+
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"],
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"] {
+  text-shadow: none !important;
+  background-color: var(--pre-code) !important;
+}
+
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight {
+  color: var(--interactive-accent-rgb) !important;
+}
+.graph-view.color-text {
+  color: var(--text-a-hover) !important;
+}
+
+html,
+body {
+  font-size: 16px !important;
+}
+
+strong {
+  font-weight: 600 !important;
+}
+
+a,
+.cm-hmd-internal-link {
+  color: var(--text-a) !important;
+  text-decoration: none !important;
+}
+
+a:hover,
+.cm-hmd-internal-link:hover,
+.cm-url {
+  color: var(--text-a-hover) !important;
+}
+
+.view-actions a {
+  color: var(--text-normal) !important;
+}
+
+.view-actions a:hover {
+  color: var(--text-a) !important;
+}
+
+/* Code blocks */
+.HyperMD-codeblock {
+  line-height: 1.4em !important;
+  background-color: var(--pre-code) !important;
+  color: var(--code-block) !important;
+}
+
+.HyperMD-codeblock-begin {
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+}
+
+.HyperMD-codeblock-end {
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+.CodeMirror-foldgutter-folded,
+.is-collapsed .nav-folder-collapse-indicator {
+  color: var(--text-a) !important;
+}
+
+.nav-file-tag {
+  color: var(--text-a) !important;
+}
+
+.is-active .nav-file-title {
+  color: var(--text-a) !important;
+  background-color: var(--background-primary-alt) !important;
+}
+
+.CodeMirror-linenumber,
+.cm-formatting {
+  font-family: var(--font-monospace) !important;
+}
+
+.cm-formatting.cm-formatting-task.cm-meta {
+  color: darkgray;
+}
+
+.cm-hmd-table-sep {
+  color: darkgray !important;
+}
+
+[role="presentaton"] {
+  color: darkgray !important;
+}
+
+.cm-inline-code {
+  color: var(--inline-code) !important;
+  background-color: var(--pre-code) !important;
+  padding: 1px !important;
+}
+
+.cm-header-1,
+.markdown-preview-section h1 {
+  font-weight: 500 !important;
+  font-size: 34px !important;
+  color: var(--text-title-h1) !important;
+}
+
+.cm-header-2,
+.markdown-preview-section h2 {
+  font-weight: 500 !important;
+  font-size: 26px !important;
+  color: var(--text-title-h2) !important;
+}
+
+.cm-header-3,
+.markdown-preview-section h3 {
+  font-weight: 500 !important;
+  font-size: 22px !important;
+  color: var(--text-title-h3) !important;
+}
+
+.cm-header-4,
+.markdown-preview-section h4 {
+  font-weight: 500 !important;
+  font-size: 20px !important;
+  color: var(--text-title-h4) !important;
+}
+
+.cm-header-5,
+.cm-header-6,
+.markdown-preview-section h5,
+.markdown-preview-section h6 {
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  color: var(--text-title-h5) !important;
+}
+
+.suggestion-item.is-selected {
+  background-color: var(--background-secondary);
+}
+
+.empty-state-container:hover {
+  background-color: var(--background-secondary-alt);
+  border: 5px solid var(--interactive-accent) !important;
+}
+
+.mod-cta {
+  color: var(--background-secondary-alt) !important;
+  font-weight: 600 !important;
+}
+
+.mod-cta:hover {
+  background-color: var(--interactive-before) !important;
+  font-weight: 600 !important;
+}
+
+.CodeMirror-cursor {
+  background-color: var(--vim-cursor) !important;
+  opacity: 60% !important;
+}
+
+.workspace-leaf.mod-active .view-header-title-container:after {
+  background: none;
+}
